@@ -7,6 +7,6 @@
 
 <nz-modal [(nzVisible)]="isVisible" nzTitle={{modalTitle}} (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
   <ng-container *nzModalContent>
-    <app-modalbody></app-modalbody>
+    <app-modalbody [innerHTML]="modalBody"></app-modalbody>
   </ng-container>
 </nz-modal>

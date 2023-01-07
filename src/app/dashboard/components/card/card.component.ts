@@ -10,16 +10,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CardComponent {
   @Input() title: string = "";
-  @Input() title2: string = "";
-
+  @Input() body: string = "";
+  @Input() modalBody: string = "";
+  @Input() pret: number = 0;
+  
   modalTitle: string = "First modal ";
+  modTitle: string = "First modal "
 
   isVisible = false;
 
 
   showModal(): void {
     this.isVisible = true;
-    this.modalTitle = this.modalTitle + this.title;
+    this.modalTitle =`${this.title} ${this.pret} RON`;
   }
 
   handleOk(): void {

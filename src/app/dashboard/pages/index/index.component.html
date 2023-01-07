@@ -1,2 +1,3 @@
-<app-card [title]="cardTitle"><div [innerHTML]="cardContent"></div></app-card>
-
+<div class="content">
+    <app-card *ngFor="let card of cardList" [title]="card.title" [modalBody]="card.modalBody" [pret]="card.pret"><div [innerHTML]="card.body"></div></app-card>
+</div>
