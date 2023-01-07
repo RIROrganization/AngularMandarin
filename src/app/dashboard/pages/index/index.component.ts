@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent {
+  cardTitle: string = "Mandarin";
+  cardTitle2: string = "Ciumparin";
 
+  cardContent: string = "<p>laksdf</p>"
 }

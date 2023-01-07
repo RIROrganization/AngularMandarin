@@ -1,8 +1,12 @@
-<nz-card style="width:300px;" nzTitle="Card title" [nzExtra]="extraTemplate">
-    <p>Card content</p>
-    <p>Card content</p>
-    <p>Card content</p>
-  </nz-card>
-  <ng-template #extraTemplate>
-    <a>More</a>
-  </ng-template>
+<nz-card style="width:300px;" nzTitle={{title}} [nzExtra]="extraTemplate">
+    <ng-content></ng-content>
+</nz-card>
+<ng-template #extraTemplate>
+    <a (click)="showModal()">Buy</a>
+</ng-template>
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle={{modalTitle}} (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <ng-container *nzModalContent>
+    <app-modalbody></app-modalbody>
+  </ng-container>
+</nz-modal>
